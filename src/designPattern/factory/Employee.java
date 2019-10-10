@@ -1,6 +1,6 @@
 package designPattern.factory;
 
 public interface Employee {
-    public int getSalary();
-    public void setSalary(int salary);
+    int getSalary();
+    void setSalary(int salary);
 }
