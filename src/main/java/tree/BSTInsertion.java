@@ -25,6 +25,8 @@ public class BSTInsertion {
         treeUtil.postOrdeerTraverstal(root);
         System.out.println("\nPreOrder traversal : root left right");
         treeUtil.preOrderTraverstal(root);
+
+        findNoOfSubTrees(root);
     }
 
     private static void insertElement(TreeDemo.Node root, int value) {
