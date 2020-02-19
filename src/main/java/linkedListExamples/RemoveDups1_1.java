@@ -1,4 +1,4 @@
-package LinkedListExamples;
+package linkedListExamples;
 
 public class RemoveDups1_1 {
 

@@ -7,7 +7,7 @@ public class Driver {
         Observer observer = new RunrateObserver();
         CricketScoreObservable observable = new CricketScoreObservable();
 
-        observable.addObserver(observer);
-        observable.stateChanged(50);
+        /*observable.addObserver(observer);
+        observable.stateChanged(50);*/
     }
 }
