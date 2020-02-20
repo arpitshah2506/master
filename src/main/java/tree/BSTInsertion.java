@@ -1,5 +1,6 @@
 package tree;
 
+import TreeDemo.Node;
 import TreeDemo.TreeUtil;
 
 /*
@@ -17,6 +18,7 @@ public class BSTInsertion {
         insertElement(root, 4);
         insertElement(root, 7);
         insertElement(root, 8);
+        insertElement(root, 9);
 
         TreeUtil treeUtil = new TreeUtil();
         System.out.println("\nInorder traversal : left root right");
@@ -26,7 +28,24 @@ public class BSTInsertion {
         System.out.println("\nPreOrder traversal : root left right");
         treeUtil.preOrderTraverstal(root);
 
+        findNodeWithMinimumValues(root);
+        findNodeWithMinimumValuesUsingRecursion(root);
         //findNoOfSubTrees(root);
+    }
+
+    private static void findNodeWithMinimumValuesUsingRecursion(Node node) {
+        if (node.left != null) {
+            findNodeWithMinimumValuesUsingRecursion(node.left);
+        } else {
+            System.out.println("\n\n Min value using recursion: " + node.value);
+        }
+    }
+
+    private static void findNodeWithMinimumValues(Node node) {
+        while (node.left != null) {
+            node = node.left;
+        }
+        System.out.println("\n\n Min value : " + node.value);
     }
 
     private static void insertElement(TreeDemo.Node root, int value) {
