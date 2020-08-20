@@ -29,6 +29,15 @@ public class BestTimeToBuyStock {
             }
         }
 
+        int result = 0;
+        int sum = 0;
+        for (int index = 0;index<prices.length;index++) {
+            sum = Math.max(sum, sum+prices[index]);
+            result = Math.max(result, sum);
+        }
+
+        System.out.println(result);
+
         System.out.println(maxProfit);
     }
 }
