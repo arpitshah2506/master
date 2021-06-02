@@ -5,12 +5,13 @@ import java.util.List;
 
 public class Merge {
     public static void main(String[] args) {
-        mergeOptimal(new ArrayList<Interval>(){{add(new Interval(1,3));add(new Interval(2,6));add(new Interval(8,10));add(new Interval(15,18));}});
+        mergeOptimal(new ArrayList<Interval>(){{add(new Interval(20,23));add(new Interval(2,6));add(new Interval(8,10));add(new Interval(15,18));}});
         System.out.println(merge(new int[][]{{1,4},{0,0}}));
     }
 
     private static List<Interval> mergeOptimal(List<Interval> intervals)
     {
+        intervals.sort((o1, o2) -> o1.start > o2.start ? 1 : -1);
         // sort start&end
         int n = intervals.size();
         int[] starts = new int[n];

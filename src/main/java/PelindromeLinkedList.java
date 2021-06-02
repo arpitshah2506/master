@@ -88,4 +88,15 @@ class ListNode {
                 "value=" + val +
                 '}';
     }
+
+    public String traverse() {
+        StringBuilder builder = new StringBuilder(0);
+        ListNode node = this;
+
+        while (node != null) {
+            builder.append(node.val).append("->");
+            node = node.next;
+        }
+        return builder.toString();
+    }
 }
